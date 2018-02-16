@@ -5,49 +5,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Easy-Vreco</title>
-  <!-- iconos materialize -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- css materialize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" href="./assets/img/poke.png" type="image/png"> <!-- icono de pestaña -->
+  <title>Pokedex</title>
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-  <div class="row">
-    <div class="col s12 m12 l12 xl12">
-      <header>
-        <div class="col s6 m3 l3 xl3">
-          <input type="text" id="punto-partida" placeholder="Ingresa tu punto de partida">
+  <div class="container">
+    <div class="row ">
+      <div class="col-xs-12">
+        <div class="text-center">
+          <img src="assets/img/logo_pokedex.gif" alt="Pokedex logo" class="rounded logo">
         </div>
-        <div class="col s6 m3 l3 xl3">
-          <input type="text" id="punto-destino" placeholder="Ingresa tu punto de termino">
-        </div>
-        <div class="col s6 m3 l3 xl3 center-align">
-          <i class="material-icons right"></i>
-<button id="trazar-ruta" class="btn waves-effect waves-light  light-green">Trazar ruta
-            <i class="material-icons rigth">send</i>
-          </button>
-        </div>
-        <div class="col s6 m3 l3 cl3 right-align">
-<button id="encuentrame" class="btn waves-effect waves-light  light-green">Encuentrame
-            <i class="material-icons rigth">adjust</i>
-          </button>
-        </div>
-      </header>
-    </div>
-  </div>
-  <section>
-    <div class="row">
-      <div class="col s12 m12 l12 xl12">
-        <div id="map"></div>
       </div>
     </div>
-  </section>
-  <!-- script -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtEklmwmNO77SH5KJTvPUUsOOQBjcxR_0&callback=initMap&libraries=places">
-</script>
-  <script src="assets/js/app.js"></script>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="input-group center">
+          <input id="inputSearch" type="text" class="form-control" placeholder="Buscar Pokemon...">
+          <span class="input-group-btn">
+            <button class="btn btn-danger" id="btnSearch" type="button">Atrápalo!</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <section id="pokemons">
+      <!-- tarjetas esquema -->
+
+      <!-- <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>       -->
+    </section>
+  </div>
 </body>
+
+<!-- script -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+<script src="./assets/js/app.js"></script>
 </html>
